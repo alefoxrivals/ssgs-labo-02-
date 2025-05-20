@@ -1,18 +1,18 @@
 # Labo-String: CLI per Utilità su Stringhe
 
-Questo progetto fornisce una base per una semplice Command-Line Interface (CLI) Node.js che offre diverse utilità per la manipolazione di stringhe.
+### Prerequisiti
 
-## Nota Importante per lo Studente - Setup Iniziale del Progetto
+* Deve essere installata la versione 18.x di Node
 
-Benvenuto/a a `labo-string`!
+### Requisiti
 
-Questo repository è un **template di partenza** per il tuo laboratorio valutato. Come avrai modo di leggere nelle istruzioni del laboratorio, una parte fondamentale del tuo lavoro iniziale (Esercizio 1) consisterà nell'analizzare attentamente la struttura e la configurazione corrente di questo progetto.
+* L'interazione con l'utente avviene tramite linea di comando.
+* Per runnare il codice l'utente deve inserire a terminale
 
-**Potresti notare che alcuni aspetti della configurazione iniziale – inclusa questa stessa documentazione (`README.md`), il file `package.json` e la gestione dei file da ignorare (`.gitignore`) – sono stati volutamente lasciati incompleti o potrebbero non seguire tutte le best practice per un progetto Node.js.**
-
-Il tuo primo compito sarà proprio quello di identificare queste aree di miglioramento e apportare le necessarie correzioni e completamenti, come dettagliato nelle istruzioni del laboratorio, per portare il progetto a uno standard qualitativo superiore.
-
-Buona analisi e buon lavoro!
+```bash
+npm run dev numero_funzione stringa_input parametro_aggiuntivo
+```
+  
 
 ## Funzionalità Principali (Previste)
 
@@ -23,8 +23,62 @@ Buona analisi e buon lavoro!
 
 ## Installazione e Avvio
 
-*(Questa sezione dovrà essere completata dallo studente come parte dell'Esercizio 1, includendo i comandi per installare le dipendenze ed eseguire l'applicazione e i test).*
+### Come installare
 
----
+* Clonare il repository:
 
-*Suggerimento: Presta particolare attenzione ai requisiti dell'Esercizio 1 del laboratorio per completare e correggere questo README e gli altri file di configurazione.*
+```bash
+git clone https://github.com/alefoxrivals/ssgs-labo-02.git
+```
+
+* Entrare nella directory clonata:
+
+```bash
+cd ${your_installation_dir}/ssgs-labo-02
+```
+
+* Installare le dipendenze:
+
+```bash
+npm install
+```
+
+### Come usare
+
+* Eseguire con:
+
+```bash
+npm run dev
+```
+
+* #### Testing:
+
+L'applicazione include test unitari scritti utilizzando il framework di test [Jest](https://jestjs.io/).
+
+I test verificano:
+
+
+
+Per eseguire i test in locale, eseguire il seguente comando nel terminale:
+
+```bash
+npm test
+```
+
+## GitHub Actions:
+
+Un workflow GitHub Actions è configurato in [`.github/workflows/test.yml`](). Questo workflow automatizza il processo di testing e mostra l’output della copertura. Viene eseguito solo in caso di `push` o `pull request` verso il branch `main`.
+
+Caratteristiche principali:
+
+* **Trigger:** Il workflow viene eseguito automaticamente a ogni evento di `push` nel repository.
+* **Ambiente:** Configura un ambiente Ubuntu pulito con la versione 18.x di Node.js.
+* **Passaggi:**
+
+  1. Effettua il checkout del codice del repository.
+  2. Configura la versione specificata di Node.js.
+  3. Installa le dipendenze del progetto usando `npm ci`.
+  4. Esegue la suite di test Jest usando `npm test`.
+  5. Carica un artifact contenente il report della copertura del codice.
+
+Questa configurazione di Integrazione Continua (CI) garantisce che tutti i test vengano eseguiti automaticamente ogni volta che viene caricato nuovo codice nel repository.
