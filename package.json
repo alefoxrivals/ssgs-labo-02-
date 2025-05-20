@@ -1,12 +1,27 @@
 {
-  "name": "labo-string",
+  "name": "ssgs-labo-02",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Labo-String è una semplice applicazione da linea di comando (CLI) scritta in Node.js che fornisce utilità per l'elaborazione di stringhe, come inversione, verifica di palindromi, troncamento e conteggio dei caratteri.",
+  "main": "./src/index.js",
+  "author": "Alessandro Alice",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./src/index.js",
+    "test": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alefoxrivals/ssgs-labo-02.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alefoxrivals/ssgs-labo-02/issues"
+  },
+  "homepage": "https://github.com/alefoxrivals/ssgs-labo-02",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

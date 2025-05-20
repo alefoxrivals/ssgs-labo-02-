@@ -3,7 +3,7 @@ const {
     isPalindrome,
     truncateString,
     countCharacters,
-} = require('./src/stringUtils');
+} = require('./stringUtils');
 
 // Otteniamo gli argomenti dalla riga di comando
 // process.argv[0] è 'node', process.argv[1] è il percorso dello script
