@@ -7,13 +7,7 @@
 ### Requisiti
 
 * L'interazione con l'utente avviene tramite linea di comando.
-* Per runnare il codice l'utente deve inserire a terminale
-
-```bash
-npm run dev numero_funzione stringa_input parametro_aggiuntivo
-```
   
-
 ## Funzionalità Principali (Previste)
 
 * Inversione di una stringa.
@@ -48,18 +42,29 @@ npm install
 * Eseguire con:
 
 ```bash
-npm run dev
+npm run dev numero_funzione stringa_input parametro_aggiuntivo
 ```
 
 * #### Testing:
 
 L'applicazione include test unitari scritti utilizzando il framework di test [Jest](https://jestjs.io/).
 
-I test verificano:
+### I test verificano:
+
+il comportamento delle utility per la manipolazione delle stringhe definite in stringUtils.js. In particolare:
+
+reverseString: controlla che la stringa venga invertita correttamente, anche in presenza di spazi o simboli.
+
+isPalindrome: verifica se una stringa è palindroma, ignorando maiuscole e spazi.
+
+truncateString: assicura che la stringa venga troncata correttamente alla lunghezza massima specificata, aggiungendo "..." se necessario.
+
+countCharacters: verifica il conteggio accurato di tutti i caratteri, distinguendo tra maiuscole/minuscole e includendo spazi e simboli.
+
+I test coprono sia casi standard che edge case, garantendo il 100% di code coverage.
 
 
-
-Per eseguire i test in locale, eseguire il seguente comando nel terminale:
+### Per eseguire i test in locale, eseguire il seguente comando nel terminale:
 
 ```bash
 npm test
